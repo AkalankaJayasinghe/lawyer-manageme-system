@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../layouts/Header';
 import Footer from '../components/common/Footer';
-import '../Styles/landing.css';
+import '../styles/landing.css';
 
 const LandingPage = () => {
   const [searchQuery, setSearchQuery] = useState('');

@@ -372,7 +372,7 @@ const LawyerProfileManagement = () => {
                 placeholder="English, Spanish, French (comma separated)"
                 helperText="Separate multiple languages with commas"
               />
-            </Card.Body()
+            </Card.Body>
           </Card>
 
           {/* Education */}

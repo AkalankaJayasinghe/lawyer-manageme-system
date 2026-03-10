@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../layout/Header';
 import Footer from '../components/common/Footer';
-import '../Styles/legalease.css';
+import '../styles/legalease.css';
 
 const LegalEaseLanding = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
