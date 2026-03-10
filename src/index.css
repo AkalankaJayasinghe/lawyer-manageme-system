@@ -424,15 +424,4 @@ body {
   100% { transform: rotate(360deg); }
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
-  .md\:flex { display: flex; }
-  .md\:hidden { display: none; }
-  .md\:block { display: block; }
-}
 
-@media (min-width: 1024px) {
-  .lg\:flex { display: flex; }
-  .lg\:hidden { display: none; }
-  .lg\:block { display: block; }
-}

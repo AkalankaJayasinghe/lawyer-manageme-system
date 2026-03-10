@@ -11,6 +11,7 @@ const ALLOWED_TYPES = [
   'image/jpeg',
   'image/png',
 ];
+const ALLOWED_EXTENSIONS = ['.pdf', '.doc', '.docx', '.jpg', '.jpeg', '.png'];
 const MAX_SIZE_MB = 10;
 
 const DocumentUpload = ({ bookingId, onUploadSuccess }) => {
@@ -22,7 +23,8 @@ const DocumentUpload = ({ bookingId, onUploadSuccess }) => {
   const [dragOver, setDragOver] = useState(false);
 
   const validateFile = (f) => {
-    if (!ALLOWED_TYPES.includes(f.type)) {
+    const ext = '.' + f.name.split('.').pop().toLowerCase();
+    if (!ALLOWED_TYPES.includes(f.type) || !ALLOWED_EXTENSIONS.includes(ext)) {
       return 'Only PDF, Word documents, and images (JPEG/PNG) are allowed.';
     }
     if (f.size > MAX_SIZE_MB * 1024 * 1024) {

@@ -50,14 +50,19 @@ const PaymentForm = ({ bookingId, amount, onSuccess }) => {
     setSubmitting(true);
     setError('');
     try {
+      // In production, use Stripe Elements or another PCI-compliant SDK to
+      // tokenize card details client-side before sending to the server.
+      // Never send raw card numbers or CVCs to your backend.
       await paymentAPI.createPayment({
         bookingId,
         amount,
         paymentMethod: 'card',
-        cardDetails: {
+        // Only non-sensitive details are sent; the server receives a token in production
+        cardSummary: {
           last4: formData.cardNumber.slice(-4),
           expiryMonth: formData.expiryMonth,
           expiryYear: formData.expiryYear,
+          cardHolder: formData.cardHolder,
         },
       });
       setSuccess(true);

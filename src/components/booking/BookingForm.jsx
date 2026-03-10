@@ -53,11 +53,14 @@ const BookingForm = ({ lawyerId, onSuccess }) => {
 
   const validate = () => {
     const newErrors = {};
+    const now = new Date();
     if (!formData.date) newErrors.date = 'Date is required';
     if (!formData.time) newErrors.time = 'Time is required';
     if (!formData.description.trim()) newErrors.description = 'Please describe your legal matter';
-    const selected = new Date(`${formData.date}T${formData.time}`);
-    if (selected < new Date()) newErrors.date = 'Booking date must be in the future';
+    if (formData.date && formData.time) {
+      const selected = new Date(`${formData.date}T${formData.time}`);
+      if (selected < now) newErrors.date = 'Booking date must be in the future';
+    }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
