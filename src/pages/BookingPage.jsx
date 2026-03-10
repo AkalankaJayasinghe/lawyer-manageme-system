@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../layout/Header';
 import Footer from '../components/common/Footer';
 import LoadingSpinner from '../components/common/LoadingSpinner';
-import '../Styles/booking.css';
+import '../styles/booking.css';
 
 const BookingPage = () => {
   const { id } = useParams();

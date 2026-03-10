@@ -4,7 +4,7 @@ import Header from '../layout/Header';
 import Footer from '../components/common/Footer';
 import StarRating from '../components/common/StarRating';
 import LoadingSpinner from '../components/common/LoadingSpinner';
-import '../Styles/lawyer-profile.css';
+import '../styles/lawyer-profile.css';
 
 const LawyerProfilePage = () => {
   const { id } = useParams();

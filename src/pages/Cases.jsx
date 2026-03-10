@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaSearch, FaPlus, FaFilter, FaEllipsisV } from 'react-icons/fa';
 import Sidebar from '../layout/sidebar.jsx';
 import Header from '../layout/Header';
-import '../Styles/cases.css';
+import '../styles/cases.css';
 
 const Cases = () => {
   const [cases, setCases] = useState([]);

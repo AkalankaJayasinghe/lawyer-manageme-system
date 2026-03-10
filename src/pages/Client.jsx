@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaSearch, FaPlus, FaFilter, FaEllipsisV } from 'react-icons/fa';
 import Sidebar from '../layout/Sidebar.jsx';
 import Header from '../layout/Header';
-import '../Styles/clients.css';
+import '../styles/clients.css';
 
 const Clients = () => {
   const [clients, setClients] = useState([]);

@@ -69,7 +69,7 @@ function App() {
                     <Dashboard />
                   </LawyerRoute>
                 } />
-                <Route path="/lawzer-profile-management" element={
+                <Route path="/lawyer-profile-management" element={
                   <LawyerRoute>
                     <LawyerProfileManagement />
                   </LawyerRoute>

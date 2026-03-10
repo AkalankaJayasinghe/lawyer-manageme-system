@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../layout/Header';
 import Footer from '../components/common/Footer';
-import '../Styles/about.css';
+import '../styles/about.css';
 
 const AboutPage = () => {
   const teamMembers = [
