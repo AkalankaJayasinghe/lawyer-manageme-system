@@ -1,0 +1,7 @@
+// filepath: f:\lawyer-management project\lawyer-management-frontend\src\store\actions\index.ts
+export const ACTION_TYPE_EXAMPLE = 'ACTION_TYPE_EXAMPLE';
+
+export const exampleAction = (payload) => ({
+  type: ACTION_TYPE_EXAMPLE,
+  payload,
+});
